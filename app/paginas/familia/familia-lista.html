@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<hr>
+<div class="col-md-12">
+    <ul class="list-group">
+        <li *ngFor="#familia of familias" (click)="onSelect(familia)" class="list-group-item">
+            <span [class.selected]="familia === familiaSelecionada" class="badge">{{familia.Id}}</span> <a>{{familia.Descricao}}</a>
+        </li>
+    </ul>
+</div>
+<style>
+    .selected {
+        background: orangered
+    }
+</style>
