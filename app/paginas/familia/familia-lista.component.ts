@@ -18,7 +18,7 @@ export class FamiliaListaComponent implements OnInit {
 
     ngOnInit() {            
         this._familiaServico.obterFamilias()
-            .subscribe(data => this.familias = data, error => console.log(error));            
+            .subscribe(data => this.familias = data, error => console.log(error));       
     }
 
     public onSelect(familia: Familia): void {

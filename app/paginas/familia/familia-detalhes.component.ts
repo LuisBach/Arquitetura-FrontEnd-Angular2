@@ -16,4 +16,8 @@ export class FamiliaDetalhesComponent implements OnInit {
         let id = <number><any>this._rotaParams.get("id");
         this._familiaServico.obterFamilia(id).subscribe(data => this.familia = data, error => console.log(error));
     }
+    
+    onSubmit(_familia: Familia) {
+        this._familiaServico.incluirFamilia(_familia);
+    }
 }

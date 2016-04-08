@@ -22,6 +22,20 @@ export class FamiliaServico {
             .catch(this.throwError);
     }
 
+    incluirFamilia(familia: Familia) {
+
+        let body = JSON.stringify({ familia });
+        
+        console.log(JSON.stringify(familia));
+        
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+
+        return this._http.post(this._apiUrl + "Familia/Incluir", JSON.stringify(familia), options)
+            .map(res => res.json())
+            .catch(this.throwError);
+    }
+
     private throwError(response) {
         return Observable.throw(response.json().error || "Server error");
     }
