@@ -2,15 +2,15 @@
 1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
 1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'run',
-1 verbose cli   'lite' ]
+1 verbose cli   'tsc:w' ]
 2 info using npm@2.14.20
 3 info using node@v4.4.1
-4 verbose run-script [ 'prelite', 'lite', 'postlite' ]
-5 info prelite angular2-quickstart@1.0.0
-6 info lite angular2-quickstart@1.0.0
+4 verbose run-script [ 'pretsc:w', 'tsc:w', 'posttsc:w' ]
+5 info pretsc:w angular2-quickstart@1.0.0
+6 info tsc:w angular2-quickstart@1.0.0
 7 verbose unsafe-perm in lifecycle true
-8 info angular2-quickstart@1.0.0 Failed to exec lite script
-9 verbose stack Error: angular2-quickstart@1.0.0 lite: `lite-server`
+8 info angular2-quickstart@1.0.0 Failed to exec tsc:w script
+9 verbose stack Error: angular2-quickstart@1.0.0 tsc:w: `tsc -w`
 9 verbose stack Exit status 3221225786
 9 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:214:16)
 9 verbose stack     at emitTwo (events.js:87:13)
@@ -23,17 +23,17 @@
 10 verbose pkgid angular2-quickstart@1.0.0
 11 verbose cwd C:\Users\luisb\Desktop\MarketPlace.UI\MarketPlace
 12 error Windows_NT 6.1.7601
-13 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "lite"
+13 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "tsc:w"
 14 error node v4.4.1
 15 error npm  v2.14.20
 16 error code ELIFECYCLE
-17 error angular2-quickstart@1.0.0 lite: `lite-server`
+17 error angular2-quickstart@1.0.0 tsc:w: `tsc -w`
 17 error Exit status 3221225786
-18 error Failed at the angular2-quickstart@1.0.0 lite script 'lite-server'.
+18 error Failed at the angular2-quickstart@1.0.0 tsc:w script 'tsc -w'.
 18 error This is most likely a problem with the angular2-quickstart package,
 18 error not with npm itself.
 18 error Tell the author that this fails on your system:
-18 error     lite-server
+18 error     tsc -w
 18 error You can get information on how to open an issue for this project with:
 18 error     npm bugs angular2-quickstart
 18 error Or if that isn't available, you can get their info via:

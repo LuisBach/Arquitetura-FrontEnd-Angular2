@@ -13,6 +13,7 @@ import {FamiliaServico} from "../../servicos/familia.servico";
 export class FamiliaListaComponent implements OnInit {
     public title: string = "Cadastro de Famílias";
     public familias: Familia[] = [];
+    public familia: Familia;
 
     constructor(private _familiaServico: FamiliaServico, private _rota: Router) { }
 
@@ -24,4 +25,8 @@ export class FamiliaListaComponent implements OnInit {
     public onSelect(familia: Familia): void {
         this._rota.navigate(["FamiliaDetalhes", { id: familia.Id }]);
     }
+
+    public novo(): void {
+        this._rota.navigate(["FamiliaDetalhes", { id: 0 }]);
+    }    
 }

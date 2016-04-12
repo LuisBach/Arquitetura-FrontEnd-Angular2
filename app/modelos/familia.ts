@@ -1,4 +1,4 @@
-export interface Familia {
+export class Familia {
     Id: number;
     Descricao: string;
     Codigo: string;
