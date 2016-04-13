@@ -22,7 +22,7 @@ export class FamiliaListaComponent implements OnInit {
             .subscribe(data => this.familias = data, error => console.log(error));       
     }
 
-    public onSelect(familia: Familia): void {
+    public editar(familia: Familia): void {
         this._rota.navigate(["FamiliaDetalhes", { id: familia.Id }]);
     }
 

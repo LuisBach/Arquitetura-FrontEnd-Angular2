@@ -5,7 +5,7 @@
     <br>
     <br>
     <ul class="list-group">
-        <li *ngFor="#familia of familias" (click)="onSelect(familia)" class="list-group-item">
+        <li *ngFor="#familia of familias" (click)="editar(familia)" class="list-group-item">
             <span class="badge">{{familia.Id}}</span> <a>{{familia.Descricao}}</a>
         </li>
     </ul>

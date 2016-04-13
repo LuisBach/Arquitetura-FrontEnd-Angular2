@@ -15,7 +15,6 @@ export class FamiliaDetalhesComponent implements OnInit {
     ngOnInit() {
 
         if (<number><any>this._rotaParams.get("id") > 0) {
-            console.info(this._rotaParams.get("id"));
             let id = <number><any>this._rotaParams.get("id");
             this._familiaServico.obterFamilia(id).subscribe(data => this.familia = data, error => console.log(error));
         }
@@ -25,10 +24,18 @@ export class FamiliaDetalhesComponent implements OnInit {
     }
 
     salvar(_familia: Familia) {
-        let retorno;
-        this._familiaServico.incluirFamilia(_familia).subscribe(data => retorno, error => console.log(error))
-
-        alert('Família salva com sucesso!');
+        
+        this._familiaServico.incluirFamilia(_familia)
+            .subscribe(data => {
+                if (<number><any>data === 2) {
+                    alert('Família já existe');
+                }
+                else {
+                    alert('F');
+                }
+            },
+            error => console.log(error),
+            () => console.log('done'));
     }
 
     public voltar(): void {
