@@ -1,2 +1,2 @@
 # Introdução
-Arquitetura para frontEnd, utilizando Angular 2.
+Estrutura básica de uma arquitetura para frontEnd, utilizando Angular 2.
